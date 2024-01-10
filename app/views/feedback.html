@@ -1,0 +1,313 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Home – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+
+
+
+      <form action="/confirmation" method="post" novalidate id="formedit">
+            
+
+
+         <h1 class="govuk-fieldset__heading">
+                  <label class="govuk-label govuk-label--xl" for="" id="">
+                    Share your feedback
+                  </label>
+                </h1>
+          
+          
+                
+              
+
+              <p class="govuk-body">
+              
+                Answer these questions to let us know how we can improve. We'll use this feedback to make our services better. 
+                </p>
+                <p class="govuk-body">
+                All feedback is anonymous and we cannot respond to individual queries. Do not enter any personal data or sensitive information. 
+                </p>
+                <p class="govuk-body">
+                If you have a question or need help, contact the Education and Skills Funding Agency using the <a href="#"></a>ESFA enquiry form</a>.
+
+                </p>
+
+                <p>&nbsp;</p>
+
+        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+                
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <!--span class="govuk-caption-l">Your feedback question 1 of 5</span-->
+                <span class="govuk-caption-l"></span>
+
+
+
+
+               
+
+
+                <h1 class="govuk-label-wrapper">
+                  <label class="govuk-label govuk-label--l" for="" id="">
+                    What would you like to give feedback about? Select all that apply
+                  </label>
+                </h1>
+                <div id="more-detail-hint" class="govuk-hint">
+                  <p> 
+                    You can choose to give feedback about the Submit learner data service or a specific collection. 
+                  </p>
+                </div>
+
+
+
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="whereDoYouLive" name="whereDoYouLive" type="checkbox" value="" onclick="ddd()">
+                  <label class="govuk-label govuk-checkboxes__label" for="whereDoYouLive">
+                    Individualised learner records (ILR)
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="whereDoYouLive-2" name="whereDoYouLive" type="checkbox" value="" onclick="ddd()">
+                  <label class="govuk-label govuk-checkboxes__label" for="whereDoYouLive-2">
+                    Earnings adjustment statements (EAS) 
+                  </label>
+                </div>
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="whereDoYouLive-4" name="whereDoYouLive" type="checkbox" value="" onclick="ddd()">
+                    <label class="govuk-label govuk-checkboxes__label" for="whereDoYouLive-4">
+                      Funding claims 
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="whereDoYouLive-5" name="whereDoYouLive" type="checkbox" value="" onclick="ddd()">
+                    <label class="govuk-label govuk-checkboxes__label" for="whereDoYouLive-5">
+                      Further education (FE) staff and vacancy data  
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="whereDoYouLive-6" name="whereDoYouLive" type="checkbox" value="" onclick="ddd()">
+                    <label class="govuk-label govuk-checkboxes__label" for="whereDoYouLive-6">
+                      Further education (FE) governor data
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="whereDoYouLive-7" name="whereDoYouLive" type="checkbox" value="" onclick="ddd()">
+                    <label class="govuk-label govuk-checkboxes__label" for="whereDoYouLive-7">
+                      Viewing and downloading reports for data you've submitted 
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="whereDoYouLive-8" name="whereDoYouLive" type="checkbox" value="" onclick="ddd()">
+                    <label class="govuk-label govuk-checkboxes__label" for="whereDoYouLive-8">
+                      Searching for employer identifiers 
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="whereDoYouLive-9" name="whereDoYouLive" type="checkbox" value="" onclick="ddd()">
+                    <label class="govuk-label govuk-checkboxes__label" for="whereDoYouLive-9">
+                      Mayoral combined authorities 
+                    </label>
+                  </div>
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="whereDoYouLive-9" name="whereDoYouLive" type="checkbox" value="" onclick="ddd()">
+                    <label class="govuk-label govuk-checkboxes__label" for="whereDoYouLive-9">
+                      Submit learner data services
+                    </label>
+                  </div>
+
+                  
+                
+              </div>
+            </legend>
+            </fieldset>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+                
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <!--span class="govuk-caption-l">Your feedback question 1 of 5</span-->
+                <span class="govuk-caption-l"></span>
+
+
+
+
+               
+
+
+                <h1 class="govuk-label-wrapper">
+                  <label class="govuk-label govuk-label--l" for="" id="">
+                    Overall, how would you describe your experience of the service?
+                  </label>
+                </h1>
+                <div id="more-detail-hint" class="govuk-hint">
+                  <p> </p>
+                </div>
+
+
+
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="whereDoYouLivef" name="whereDoYouLive4" type="radio" value="" onclick="ddd()">
+                  <label class="govuk-label govuk-radios__label" for="whereDoYouLivef">
+                    Very satisfied 
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="whereDoYouLive-2f" name="whereDoYouLive4" type="radio" value="" onclick="ddd()">
+                  <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2f">
+                    Satisfied  
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="whereDoYouLive-3f" name="whereDoYouLive4" type="radio" value="" onclick="ddd()">
+                    <label class="govuk-label govuk-radios__label" for="whereDoYouLive-3f">
+                      Neither satisfied nor dissatisfied   
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="whereDoYouLive-4f" name="whereDoYouLive4" type="radio" value="" onclick="ddd()">
+                    <label class="govuk-label govuk-radios__label" for="whereDoYouLive-4f">
+                      Dissatisfied 
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="whereDoYouLive-5f" name="whereDoYouLive4" type="radio" value="" onclick="ddd()">
+                    <label class="govuk-label govuk-radios__label" for="whereDoYouLive-5f">
+                      Very dissatisfied  
+                    </label>
+                  </div>
+                  
+                
+              </div>
+            </legend>
+            </fieldset>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <div class="govuk-form-group" >
+            <h1 class="govuk-label-wrapper">
+              <label class="govuk-label govuk-label--m" for="more-detail" id="textareaLabelYesNo1">
+                What are your main reasons for giving this rating?
+              </label>
+            </h1>
+            <div id="more-detail-hint" class="govuk-hint">
+              <p class="govuk-body">
+                Tell us anything you'd like to share about your experience. You can give general feedback or tell us about a specific problem. Do not include any information that could identify you personally, such as your name. 
+              </p>
+              </div>
+            <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
+          </div>
+
+
+
+
+
+
+
+
+
+
+  <div class="govuk-button-group">
+    <button class="govuk-button" data-module="govuk-button" id="bilbosubmit"> 
+      Submit
+    </button>
+    <!--a href="/rpt-transactions" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      Save and exit
+    </a-->
+  </div>
+
+
+
+  </form>
+
+
+        <!--
+      <hr>
+      
+      <p>
+        This is a prototype used for testing. Please ignore everything below this line.
+    </p>
+
+    
+    <p><b>Goto:</b></p>
+    <p><a href="/gov-noting-changes">Long Governance</a></p>
+    <p><a href="/task-list">Task list</a></p>
+    <p><a href="/check-answers">Check your answers</a></p>
+    <p><a href="/feedback-type">Feedback</a></p>
+    <p><a href="/gov-information">Information</a></p>
+    -->
+
+      
+
+
+        
+        
+    </div>
+
+
+    <!--
+    <div class="govuk-grid-column-one-third">
+      <h2 class="govuk-heading-m">Related content</h2>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Guidance on <a href="#" class="govuk-link" target="">operating an academy trust as a going concern</a></li>
+        <li>Information on <a href="#" class="govuk-link" target="">integrated curriculum and financial planning</a></li>
+        <li>Guidance on <a href="#" class="govuk-link" target="">good estate management in schools</a></li>
+        <li>The <a href="#" class="govuk-link" target="">school resource management collection</a></li>
+        <li><a href="#" class="govuk-link" target="">Commissioning high-quality trusts</a></li>
+      </ul>
+      
+    </div>
+  -->
+
+  </div>
+
+
+  <script>
+
+
+  </script>
+
+{% endblock %}

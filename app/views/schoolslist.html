@@ -1,0 +1,316 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Home – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="">
+      <h1 class="govuk-heading-xl">
+        Transactions
+      </h1>
+
+
+
+      <div class="govuk-button-group"  style="float:right; display:none" id="buttonsNew">
+        <a href="/start-new" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+          Submit new transaction
+        </a>
+      </div>
+
+      <div class="govuk-button-group"  style="float:right; display:block" id="buttonsContinue" >
+        <a href="/rpt-form-cost" role="button" draggable="false" class="govuk-button " data-module="govuk-button">
+          Continue saved transaction
+        </a>
+        <a href="/start-new" role="button" draggable="false" class="govuk-button govuk-button--secondary " data-module="govuk-button">
+          Submit new transaction
+        </a>
+      </div>
+
+
+      <table >
+        <tr>
+          <td style="vertical-align: bottom; padding-right: 10px; ">
+            
+            <label class="govuk-label" for="sort">
+             Period
+            </label>
+            <select class="govuk-select" id="sort" name="sort">
+              <option value="" selected>2022 to 2023</option>
+              <option value="">2021 to 2022</option>
+              <option value="">2020 to 2021</option>
+              <option value="">2019 to 2020</option>
+            </select>
+          
+        </td>
+        <td style="vertical-align: bottom; padding-right: 10px; ">
+            
+            <label class="govuk-label" for="sort">
+             Status
+            </label>
+            <select class="govuk-select" id="sort" name="sort">
+              <option value="" selected>2022 to 2023</option>
+              <option value="">2021 to 2022</option>
+              <option value="">2020 to 2021</option>
+              <option value="">2019 to 2020</option>
+            </select>
+          
+        </td>
+        <!-- td style="vertical-align: bottom; padding-right: 10px; ">
+          <button class="govuk-button govuk-button--secondary" style="margin:0;">
+            Apply&nbsp;filters
+          </button>
+        </td>
+        <td style="vertical-align: bottom; ">
+          <p style="margin:0;"><u>Clear&nbsp;filters</u></p>
+        </td-->
+        </tr>
+      </table>
+
+      <p>&nbsp</p>
+      <!-- p>Displaying 10 out of 15 transactions</p -->
+
+
+
+      <table class="govuk-table" id="tab1" style="width:500px">
+        <tr class="govuk-table__row">
+          <td class="" style="text-align: center; width:100px; background-color: #FCD6C3; border-right: 6px solid white;">
+            <strong class="govuk-tag govuk-tag--orange">
+              <span id="">INFORMATION REQUESTED<br>3</span>
+            </strong>
+          </td>
+          <td class="" style="text-align: center; width:100px; background-color: #F6D7D2; border-right: 6px solid white;">
+            <strong class="govuk-tag govuk-tag--red">
+              <span id="">REJECTED<br>1</span>
+            </strong>
+          </td>
+          <td class="" style="text-align: center; width:100px; background-color: #CCE2D8; border-right: 6px solid white;">
+            <strong class="govuk-tag govuk-tag--green">
+              <span id="">APPROVED<br>1</span>
+            </strong>
+          </td>
+          <td class="" style="text-align: center; width:100px; background-color: #FFF7BF; border-right: 6px solid white;">
+            <strong class="govuk-tag govuk-tag--yellow">
+              <span id="">APPROVAL NOT REQUIRED<br>4</span>
+            </strong>
+          </td>
+          <td class="" style="text-align: center; width:100px; background-color: #EEEFEF;">
+            <strong class="govuk-tag govuk-tag--grey">
+              <span id="">AWAITING DECISION<br>3</span>
+            </strong>
+          </td>
+        </tr>
+      </table>
+
+      <table class="govuk-table" id="tab1">
+
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header app-custom-class">ID</th>
+            <th scope="col" class="govuk-table__header app-custom-class">Cost</th>
+            <th scope="col" class="govuk-table__header app-custom-class">Supplier</th>
+            <th scope="col" class="govuk-table__header app-custom-class">Submission date</th>
+            <th scope="col" class="govuk-table__header app-custom-class">Transaction start date</th>
+            <th scope="col" class="govuk-table__header app-custom-class">Last updated</th>
+            <th scope="col" class="govuk-table__header app-custom-class">Status</th>
+            <th scope="col" class="govuk-table__header app-custom-class">&nbsp;</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a href="#">RP6242281</a></th>
+            <td class="govuk-table__cell">£18,000</td>
+            <td class="govuk-table__cell">Wayne Enterprises</td>
+            <td class="govuk-table__cell">7 Nov 2022</td>
+            <td class="govuk-table__cell">12 Nov 2022</td>
+            <td class="govuk-table__cell">04 Dec 2022</td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--red">
+                <span id="tagRejected">NOT APPROVED</span>
+              </strong>
+            </td>
+            <td class="govuk-table__cell" >
+              &nbsp;
+            </td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a href="#">RP6242281</a></th>
+            <td class="govuk-table__cell">£18,000</td>
+            <td class="govuk-table__cell">Cyberdyne Inc.</td>
+            <td class="govuk-table__cell">7 Nov 2022</td>
+            <td class="govuk-table__cell">12 Nov 2022</td>
+            <td class="govuk-table__cell">04 Dec 2022</td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--green">
+                <span id="tagApproved">APPROVED</span>
+              </strong>
+            </td>
+            <td class="govuk-table__cell" >
+              &nbsp;
+            </td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a href="#">RP1726354</a></th>
+            <td class="govuk-table__cell">£18,000</td>
+            <td class="govuk-table__cell">Weyland Yutani</td>
+            <td class="govuk-table__cell">7 Nov 2022</td>
+            <td class="govuk-table__cell">12 Nov 2022</td>
+            <td class="govuk-table__cell">04 Dec 2022</td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--grey">
+                <span id="tagAwaiting">AWAITING DECISION</span>
+              </strong>
+            </td>
+            <td class="govuk-table__cell" >
+              &nbsp;
+            </td>
+          </tr>
+          
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a href="#">RP1234567</a></th>
+            <td class="govuk-table__cell">£23,000</td>
+            <td class="govuk-table__cell">Sheffield Diocesan Board</td>
+            <td class="govuk-table__cell">7 Nov 2022</td>
+            <td class="govuk-table__cell">12 Nov 2022</td>
+            <td class="govuk-table__cell">04 Dec 2022</td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--pink">
+                <span id="tagInformation">INFORMATION REQUESTED</span>
+              </strong>
+            </td>
+            <td class="govuk-table__cell" >
+              &nbsp;
+            </td>
+          </tr>
+          
+          
+          <!-- tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a href="#">RP7654321</a></th>
+            <td class="govuk-table__cell">£52,000</td>
+            <td class="govuk-table__cell">ACME inc</td>
+            <td class="govuk-table__cell">7 Nov 2022</td>
+            <td class="govuk-table__cell">12 Nov 2022</td>
+            <td class="govuk-table__cell">04 Dec 2022</td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--turquoise">
+                <span id="tagIncomplete">INCOMPLETE</span>
+              </strong>
+            </td>
+            <td class="govuk-table__cell" >
+              <a href="/rpt-form-date">Continue</a>
+            </td>
+          </tr -->
+
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a href="#">RP1234567</a></th>
+            <td class="govuk-table__cell">£23,000</td>
+            <td class="govuk-table__cell">Sheffield Diocesan Board</td>
+            <td class="govuk-table__cell">7 Nov 2022</td>
+            <td class="govuk-table__cell">12 Nov 2022</td>
+            <td class="govuk-table__cell">04 Dec 2022</td>
+            <td class="govuk-table__cell">
+              <strong id="tagColour" class="govuk-tag govuk-tag--yellow">
+                <span id="tagDeclared">APPROVAL NOT REQUIRED</span>
+              </strong>
+            </td>
+            <td class="govuk-table__cell" >
+              &nbsp;
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+
+
+      <nav class="govuk-pagination" role="navigation" aria-label="results">
+        <div class="govuk-pagination__prev">
+          <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
+            <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+              <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+            </svg>
+            <span class="govuk-pagination__link-title">Previous</span></a>
+        </div>
+        <ul class="govuk-pagination__list">
+          <li class="govuk-pagination__item">
+            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1">
+              1
+            </a>
+          </li>
+          <li class="govuk-pagination__item govuk-pagination__item--current">
+            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2" aria-current="page">
+              2
+            </a>
+          </li>
+          <li class="govuk-pagination__item">
+            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+              3
+            </a>
+          </li>
+        </ul>
+        <div class="govuk-pagination__next">
+          <a class="govuk-link govuk-pagination__link" href="#" rel="next"> <span class="govuk-pagination__link-title">Next</span> <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+              <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+            </svg></a>
+        </div>
+      </nav>
+      
+
+
+    </div>
+  </div>
+  <p> Versions: 
+  <span onclick="v1()" style="cursor:pointer"><u>V1</u></span> 
+  <span onclick="v2()" style="cursor:pointer"><u>V2</u></span> 
+  <span onclick="v3()" style="cursor:pointer"><u>V3</u></span> 
+</p>
+  <script>
+    function v1(){
+      $("#tagRejected").html("NOT APPROVED");
+      $("#tagApproved").html("APPROVED");
+      $("#tagAwaiting").html("AWAITING DECISION");
+      $("#tagInformation").html("INFORMATION REQUESTED");
+      $("#tagIncomplete").html("INCOMPLETE");
+      $("#tagDeclared").html("APPROVAL NOT REQUIRED");
+      $("#tagColour").attr('class', 'govuk-tag govuk-tag--yellow');
+
+      $("#buttonsNew").css("display","block");
+      $("#buttonsContinue").css("display","none");
+      
+    }
+
+    function v2(){
+      $("#tagRejected").html("NOT COMPLIANT");
+      $("#tagApproved").html("COMPLIANT");
+      $("#tagAwaiting").html("UNDER REVIEW");
+      $("#tagInformation").html("ACTION REQUIRED");
+      $("#tagIncomplete").html("IN PROGRESS");
+      $("#tagDeclared").html("DECLARED");
+      $("#tagColour").attr('class', 'govuk-tag govuk-tag--yellow');
+      
+      $("#buttonsNew").css("display","none");
+      $("#buttonsContinue").css("display","block");
+    }
+
+    function v3(){
+      $("#tagRejected").html("ASSURANCE NOT MET");
+      $("#tagApproved").html("ASSURANCES MET");
+      $("#tagAwaiting").html("UNDER ASSESSMENT");
+      $("#tagInformation").html("INFORMATION REQUIRED");
+      $("#tagIncomplete").html("SUBMISSION IN PROGRESS");
+      $("#tagDeclared").html("APPROVAL NOT REQUIRED");
+      $("#tagColour").attr('class', 'govuk-tag govuk-tag--green');
+
+      $("#buttonsNew").css("display","block");
+      $("#buttonsContinue").css("display","none");
+    }
+
+  </script>
+
+
+{% endblock %}
